@@ -1,5 +1,11 @@
+import { AuthService } from './services/auth.service';
+import { ChatService } from './services/chat.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -13,11 +19,15 @@ import { NavComponent } from './nav/nav.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
 
-// const routes: Routes = {
-//   {path: 'signup', component:  },
-//   {path: 'signup', component:  },
-//   {path: 'signup', component:  }
-// };
+import { environment } from '../environments/environment';
+
+
+const routes: Routes = [
+  {path: 'signup', component: SignupFormComponent  },
+  {path: 'login', component:  LoginFormComponent},
+  {path: 'chat', component:  ChatroomComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'}
+];
 
 @NgModule({
   declarations: [
@@ -34,9 +44,13 @@ import { UserItemComponent } from './user-item/user-item.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule.forRoot(routes),
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [ ChatService, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
