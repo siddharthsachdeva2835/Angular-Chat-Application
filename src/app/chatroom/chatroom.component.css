@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    height: 84vh;
+}
+.user-list {
+    width: 30%;
+    background-color: #333332;
+}
+.chat-box {
+    position: relative;
+    width: 70%;   
+    background-color: #F0F1EE; 
+}
+.chat-form {
+    height: 8vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
