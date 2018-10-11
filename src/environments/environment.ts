@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyCkN2Kw99I6jHwCfQEgXnFL_YQ1CikVfMU',
-    authDomain: 'crownchat-e8f10.firebaseapp.com',
-    databaseURL: 'https://crownchat-e8f10.firebaseio.com',
-    projectId: 'crownchat-e8f10',
-    storageBucket: 'crownchat-e8f10.appspot.com',
-    messagingSenderId: '806892730404'
+    apiKey: 'AIzaSyCLlz2Tavh3QpkFD0v8hsV_ZlNhztaJ7R8',
+    authDomain: 'chatroom-89948.firebaseapp.com',
+    databaseURL: 'https://chatroom-89948.firebaseio.com',
+    projectId: 'chatroom-89948',
+    storageBucket: 'chatroom-89948.appspot.com',
+    messagingSenderId: '715918510997'
   }
 };
 
