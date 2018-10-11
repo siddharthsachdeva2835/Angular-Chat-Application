@@ -37,16 +37,16 @@ export class ChatService {
       message: msg,
       timesent: timestamp,
       // username: this.username,
-      username: 'sid',
+      username: 'SIDDHARTH',
       email: email
     });
 
-    console.log(this.chatMessages.valueChanges().subscribe(data => console.log(data)));
+    // console.log(this.chatMessages.valueChanges().subscribe(data => console.log(data)));
   }
 
   getTimeStamp() {
     const now = new Date();
 
-    return (now.toLocaleDateString() + now.toLocaleTimeString());
+    return (now.toLocaleDateString() + ' ' + now.toLocaleTimeString());
   }
 }

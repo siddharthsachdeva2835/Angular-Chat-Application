@@ -17,3 +17,7 @@
     bottom: 0;
     width: 100%;
 }
+.feed {
+    height: 75vh;
+    overflow-y: scroll;
+}
