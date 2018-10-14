@@ -10,7 +10,7 @@
     <div class="links">
         <a class="link" *ngIf="!user?.uid" href="#"  (click)="login()"><span>Login</span></a>
         <a class="link" *ngIf="!user?.uid" routerLink="/signup"><span>Signup</span></a>
-        <div class="greet"><span>Hello, {{user.displayName}}</span></div>
+        <div *ngIf="user?.uid" class="greet"><span>Hello, {{user.displayName}}</span></div>
         <a  class="link" *ngIf="user?.uid"  href="#" (click)="logout()"><span>Logout</span></a>
     </div>
   </div>

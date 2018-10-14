@@ -24,7 +24,7 @@ export class AuthService {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then(user => {
         const status = 'online';
-        this.setUserStatus(status);
+        this.setUserStatus(status, user.user.uid);
         this.router.navigate(['chat']);
       });
   }
@@ -33,12 +33,16 @@ export class AuthService {
     return this.user;
   }
 
+  get authstateOfUser() {
+    return this.authState;
+  }
+
+
   signUp(email: string, password: string, displayName: string) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
               .then(user => {
 
                 this.authState = user;
-                console.log(this.authState.user);
 
                 const status = 'online';
                 this.setUserData(email, displayName, status);
@@ -58,8 +62,8 @@ export class AuthService {
 
   }
 
-  setUserStatus (status: string) {
-    const path = `users/${this.currentUserID}`;
+  setUserStatus (status: string, uid: string) {
+    const path = `users/${uid}`;
     const data = {
       status: status
     };

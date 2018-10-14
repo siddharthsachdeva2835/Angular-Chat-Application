@@ -1,14 +1,14 @@
 <div class="container">
-  <div class="sign-up-card">
-    <form #signupForm="ngForm">
-      <h2 class="heading">Sign Up</h2>
+  <div>
+    <form class="sign-up-card" #signupForm="ngForm">
+      <h2 class="heading">SIGN UP</h2>
 
       <label class="label">Email</label>
       <input type="email" name="email"
           placeholder="Enter email address" [(ngModel)]="email"
             class="formInput" maxlength="60" required/>
       
-      <label class="label">password</label>
+      <label class="label">Password</label>
       <input type="password" name="password"
           placeholder="Enter email address" [(ngModel)]="password"
             class="formInput" maxlength="60" required/>
