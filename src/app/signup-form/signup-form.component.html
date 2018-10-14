@@ -1,3 +1,31 @@
-<p>
-  signup-form works!
-</p>
+<div class="container">
+  <div class="sign-up-card">
+    <form #signupForm="ngForm">
+      <h2 class="heading">Sign Up</h2>
+
+      <label class="label">Email</label>
+      <input type="email" name="email"
+          placeholder="Enter email address" [(ngModel)]="email"
+            class="formInput" maxlength="60" required/>
+      
+      <label class="label">password</label>
+      <input type="password" name="password"
+          placeholder="Enter email address" [(ngModel)]="password"
+            class="formInput" maxlength="60" required/>
+      
+      
+            
+      <label class="label">Display Name</label>
+      <input type="text" name="displayName"
+          placeholder="Enter email address" [(ngModel)]="displayName"
+            class="formInput" maxlength="60" required/>
+      
+      <button [disabled]="!signupForm.form.valid"
+              type="submit" (click)="signUp()" 
+              class="btn" id="btn-signUp">
+              Sign Up
+            </button>
+
+    </form>
+  </div>
+</div>

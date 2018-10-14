@@ -2,14 +2,21 @@
     border-radius: 5PX;
     display: flex;
     margin: 20px;
-    height: 50px;
+    height: 55px;
     border: 2px solid #333332;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15px;
     color: #333332;
 }
+.username {
+    padding: 3px;
+}
+.time {
+    padding: 3px;
+    font-size: 12px;
+}
 .detail-box {
-    width: 20%;
+    width: 22%;
     font-weight: 500;
     /* background-color: #FFD464; */
     background-color: #F26964;
@@ -18,7 +25,8 @@
     padding: 10px;
 }
 .text-box {
+    font-size: 17px;
     font-weight: 500;
-    padding: 16px;
-    width: 80%;
+    padding: 17px;
+    width: 78%;
 }

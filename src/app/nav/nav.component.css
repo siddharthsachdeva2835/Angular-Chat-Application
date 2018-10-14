@@ -13,6 +13,57 @@
 }
 .brand {
     display: inline-block;
-    padding-top: 19px;
-    padding-left: 20px;
+    position: relative;
+    top: -10px;
+    left:20px;
+   
 }
+
+.links {
+    float: right;
+    height: 16vh;
+    text-align: center;
+    vertical-align: center;
+    color: #333332;
+}
+
+.link {
+    color: #333332;
+    display: inline-block;
+    height: 16vh;
+    width: 100px;
+    border-left: 0.1px solid #333332;
+    text-decoration: none;
+}
+
+.link:hover {
+    background: #333332;
+    color: whitesmoke;
+}
+
+.link > span {
+    position: relative;
+    top: 40px;
+}
+
+.greet {
+    display: inline-block;
+    height: 16vh ;
+    width: 140px;
+    border-left: 0.1px solid #333332;
+}
+
+.greet > span {
+    position: relative;
+    top: 40px;
+}
+
+.link-container {
+    width: 60%
+}
+
+.brand-container {
+    width: 40%;
+}
+
+
